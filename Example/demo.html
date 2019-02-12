@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+  <head>
+    <title>my-countdown demo</title>
+    <meta charset="UTF-8">
+    <script src="http://www.gstatic.com/external_hosted/polymer/custom.elements.min.js"></script>
+    <style>
+      body {
+        margin: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #container{
+        text-align: center;
+      }
+      #box{
+        width: 50%;
+        height: 50%;
+        margin: 20vh auto;
+        background-color: rgba(0,0,0,0.5);
+        padding: 10px;
+        color: #fff;
+      }
+      #countdown-timer_1{
+        font-size: 30px;
+      }
+    </style>
+    <script src="coundown.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="box">
+        <div class="text-class">
+          <h1>Coming Soon</h1>
+          <h3>Website is under construction please send us mail directly</h3>
+        </div>
+        <countdown-timer id="countdown-timer_1" data-time="Feb 24, 2019 23:59:59" data-format="D-H-M-S" data-string="days to go" data-expire="Live" class="gwd-countdown-timer-1my3"></countdown-timer>
+      </div>
+    </div>
+  </body>
+</html>
+
