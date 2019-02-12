@@ -33,11 +33,12 @@ These instructions will help you to use the library in your 'Project'. Also help
 ```
 <script src="coundown.js"></script>//add Script
 
-<countdown-timer data-time="" data-format="" data-string="" data-expire="" ></countdown-timer> //copy tag and paste in body tag
+<countdown-timer data-time="" data-format="" data-string="" data-expire="" ></countdown-timer>
+//copy tag and paste in body tag
 ```
 
 ### Initialize Library
-
+> For initialize library add target date or data-format with D-H-M-S.
 ```
 <!DOCTYPE html>
 <html lang="en">
