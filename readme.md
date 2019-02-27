@@ -10,10 +10,6 @@ Hi friends, You can add Coundown in any webpage, banner, hybrid-application, wit
    * [Add Library](#add-library)
    * [Initialize Library](#initialize-library)
    * [Attributes](#attributes)
-   * [Add Custom Form Fields](#add-custom-form-fields)
-   * [Fields:Array[Object] Properties or Value](#fieldsarrayobject-properties-or-value)
-   * [Integrate with Google Sheet](#integrate-with-google-sheet)
-   * [Demo](http://mydevspace.ga/FormBuilderLibrary/Example/)
 <!--te-->
 
 ## Features
