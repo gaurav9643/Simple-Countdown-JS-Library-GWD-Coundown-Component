@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script>
+            (function(t, a, l, k, j, s) {
+                s = a.createElement('script');
+                s.async = 1;
+                s.src = "countdown-lib.js";
+                a.head.appendChild(s);
+                k = t.Promise;
+                t.Countdown = {
+                    v: 1,
+                    ready: {
+                        then: function(f) {
+                            if (k) return new k(function(r, e) {
+                                l.push([f, r, e])
+                            });
+                            l.push([f])
+                        },
+                        catch: function() {
+                            return k && new k()
+                        },
+                        c: l
+                    }
+                };
+                //console.log(t, a, l, k, j, s)
+            })(window, document, []);
+
+            Countdown.ready.then(function(f){
+                console.log(f)
+            })
+        </script>
+    </head>
+    <body>
+        <countdown-timer id="countdown-timer_1" data-time="Feb 24, 2022 00:00:00" data-format="D-H-M-S" data-string="d-h-m-s" data-expire="This text will show when time goes up"></countdown-timer>
+       
+    </body>
+</html>

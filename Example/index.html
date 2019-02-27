@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="countdown"></div>
+    <div id="next_date"></div>
+
+    <script src="multi_dates_countdown.js"></script>
+    <script>
+        var cjs = new countdownJS({
+            countdown_selector : 'countdown',
+            next_date_selector : 'next_date_selector',
+            target_date_time : 'Feb 24, 2022 00:00:00',
+            countdown_type : 'Full',
+        });
+    </script>
+</body>
+</html>

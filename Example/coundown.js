@@ -53,9 +53,7 @@ if (document.registerElement) {
             this.div = document.createElement('div');
             this.appendChild(this.div);
           }
-          function pad(n){
-            return (n < 10) ? ("0" + n) : n;
-          }
+          
           var _div = this.div;
           var countDownDate = new Date(data).getTime();
           var x = setInterval(function() {
@@ -67,24 +65,25 @@ if (document.registerElement) {
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
             var _t = '';
             
-            if(format.indexOf('D') != -1 && pad(days) != '00'){
-              _t += pad(days);
+            console.log(days,hours,minutes,seconds)
+            if(format.indexOf('D') != -1 && days != 0){
+              _t += days;
               if(string[0] != '0' && string[0] != undefined){_t += string[0]+' ';}else{_t += ' ';}
             }
-            if(format.indexOf('H') != -1 && pad(hours) != '00'){
-              _t += pad(hours);
+            if(format.indexOf('H') != -1 && (hours != 0 || days != 0)){
+              _t += hours;
               if(string[1] != '0' && string[1] != undefined){_t += string[1]+' ';}else{_t += ' ';}
             }
-            if(format.indexOf('M') != -1  && pad(minutes) != '00'){
-              _t +=  pad(minutes);
+            if(format.indexOf('M') != -1  && (days != 0 || hours != 0 || minutes != 0)){
+              _t +=  minutes;
               if(string[2] != '0' && string[2] != undefined){_t += string[2]+' ';}else{_t += ' ';}
             }
             if(format.indexOf('S') != -1){
-              _t += pad(seconds);
+              _t += seconds;
               if(string[3] != '0' && string[3] != undefined){_t += string[3]+' ';}else{_t += ' ';}
             }
             _div.innerHTML = _t;
-            if(format.indexOf('D') != -1 && pad(days) == '00' && format.indexOf('H') == -1 && format.indexOf('M') == -1 && format.indexOf('S') == -1){
+            if(format.indexOf('D') != -1 && days == 0 && format.indexOf('H') == -1 && format.indexOf('M') == -1 && format.indexOf('S') == -1){
               debugger
               clearInterval(x);
               if(expire != '' || expire != null){_div.innerHTML = expire;}else{_div.innerHTML = "EXPIRED";}

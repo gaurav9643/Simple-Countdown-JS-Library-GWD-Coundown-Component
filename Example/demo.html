@@ -1,8 +1,12 @@
 <!DOCTYPE html>
   <head>
     <title>Demo Countdown</title>
-    <meta charset="UTF-8">
-    <script src="http://www.gstatic.com/external_hosted/polymer/custom.elements.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <style>
       body {
         margin: 20px;
@@ -14,27 +18,112 @@
       #box{
         width: 50%;
         height: 50%;
-        margin: 20vh auto;
+        margin: 10vh auto;
         background-color: rgba(0,0,0,0.5);
         padding: 10px;
         color: #fff;
+        font-size: 25px;
       }
-      #countdown-timer_1{
-        font-size: 30px;
-      }
+     pre{    white-space: pre-wrap;}
     </style>
     <script src="coundown.js"></script>
   </head>
   <body>
-    <div id="container">
-      <div id="box">
-        <div class="text-class">
-          <h1>Coming Soon</h1>
-          <h3>Website is under construction please send us mail directly</h3>
+    <div class="container mt-3">
+      <h2>Countdown JS Library Examples</h2>
+      <br>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu1">data-time</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu2">data-format</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu3">data-string</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu4">data-expire</a>
+        </li>
+      </ul>
+    
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div id="home" class="container tab-pane active"><br>
+          <h3>Example</h3>
+          <pre>&lt;countdown-timer <b>data-time="Feb 24, 2022 00:00:00" data-format="D-H-M-S" data-string="d-h-m-s" data-expire="This text will show when time goes up"</b>>&lt;/countdown-timer&gt;</pre>
+          <div class="card bg-info text-white text-center">
+            <div id="box">
+              <div class="text-class">
+                <h4>Coming Soon</h4>
+                <h5>Website is under construction please send us mail directly</h5>
+              </div>
+              <countdown-timer id="countdown-timer_1" data-time="Feb 24, 2022 00:00:00" data-format="D-H-M-S" data-string="d-h-m-s" data-expire="This text will show when time goes up"></countdown-timer>
+            </div>
+          </div>
         </div>
-        <countdown-timer id="countdown-timer_1" data-time="Feb 24, 2019 23:59:59" data-format="D-H-M-S" data-string="D-H-M-S" data-expire="Live" class="gwd-countdown-timer-1my3"></countdown-timer>
+        <div id="menu1" class="container tab-pane fade"><br>
+          <h3>data-time</h3>
+          <p>You can set target date using data-time attribute or Also data-time initialize the countdown-js</p>
+          <pre>&lt;countdown-timer <b>data-time="Feb 24, 2050 12:01:01"</b> data-format="D-H-M-S" data-string="d-h-m-s" data-expire="This text will show when time goes up">&lt;/countdown-timer&gt;</pre>
+          <div class="card bg-info text-white text-center">
+            <div id="box">
+              <div class="text-class">
+                <h4>Coming Soon</h4>
+                <h5>Website is under construction please send us mail directly</h5>
+              </div>
+              <countdown-timer id="countdown-timer_2" data-time="Feb 24, 2022 00:00:00" data-format="D-H-M-S" data-string="d-h-m-s" data-expire="This text will show when time goes up"></countdown-timer>
+            </div>
+          </div>
+        </div>
+        <div id="menu2" class="container tab-pane fade"><br>
+          <h3>data-format</h3>
+          <p>data-format </p>
+          <pre> &lt;countdown-timer data-time="Feb 24, 2022 00:00:00" <b>data-format="D-H-M-S"</b> data-string="d-h-m-s" data-expire="This text will show when time goes up">&lt;/countdown-timer&gt; </pre>
+          <div class="card bg-info text-white text-center">
+            <div id="box">
+              <div class="text-class">
+                <h4>Coming Soon</h4>
+                <h5>Website is under construction please send us mail directly</h5>
+              </div>
+              <countdown-timer id="countdown-timer_1" data-time="Feb 24, 2022 00:00:00" data-format="D-H-M-S" data-string="d-h-m-s" data-expire="This text will show when time goes up"></countdown-timer>
+            </div>
+          </div>
+        </div>
+        <div id="menu3" class="container tab-pane fade"><br>
+          <h3>data-string</h3>
+          <pre> &lt;countdown-timer data-time="Feb 24, 2022 00:00:00" data-format="D-H-M-S" data-string="d-h-m-s" data-expire="This text will show when time goes up">&lt;/countdown-timer&gt; </pre>
+          <div class="card bg-info text-white text-center">
+            <div id="box">
+              <div class="text-class">
+                <h4>Coming Soon</h4>
+                <h5>Website is under construction please send us mail directly</h5>
+              </div>
+              <countdown-timer id="countdown-timer_1" data-time="Feb 24, 2022 00:00:00" data-format="D-H-M-S" data-string="d-h-m-s" data-expire="This text will show when time goes up"></countdown-timer>
+            </div>
+          </div>
+        </div>
+        <div id="menu4" class="container tab-pane fade"><br>
+          <h3>data-expire</h3>
+          <pre> &lt;countdown-timer data-time="Feb 24, 2022 00:00:00" data-format="D-H-M-S" data-string="d-h-m-s" data-expire="This text will show when time goes up">&lt;/countdown-timer&gt; </pre>
+          <div class="card bg-info text-white text-center">
+            <div id="box">
+              <div class="text-class">
+                <h4>Coming Soon</h4>
+                <h5>Website is under construction please send us mail directly</h5>
+              </div>
+              <countdown-timer id="countdown-timer_1" data-time="Feb 24, 2022 00:00:00" data-format="D-H-M-S" data-string="d-h-m-s" data-expire="This text will show when time goes up"></countdown-timer>
+            </div>
+          </div>
       </div>
     </div>
+    <script>
+        
+    </script>
   </body>
 </html>
 

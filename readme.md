@@ -8,8 +8,8 @@ Hi friends, You can add Coundown in any webpage, banner, hybrid-application, wit
    * [Features](#features)
    * [Getting Started](#getting-started)
    * [Add Library](#add-library)
-   * [Initialize Library](#initailize-library)
-   * [Options](#options)
+   * [Initialize Library](#initialize-library)
+   * [Attributes](#attributes)
    * [Add Custom Form Fields](#add-custom-form-fields)
    * [Fields:Array[Object] Properties or Value](#fieldsarrayobject-properties-or-value)
    * [Integrate with Google Sheet](#integrate-with-google-sheet)
@@ -38,7 +38,7 @@ These instructions will help you to use the library in your 'Project'. Also help
 ```
 
 ### Initialize Library
-> For initialize library add target date or data-format with D-H-M-S.
+> For initialize library you need add target date in data-time attribute or data-format with D-H-M-S.
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +56,7 @@ These instructions will help you to use the library in your 'Project'. Also help
 ```
 
 
-### Options
+### Attributes
 
 | Attribute  | Format | Example | Description |
 | ----  | :---:  | :---:  |  ---  |
@@ -65,9 +65,9 @@ These instructions will help you to use the library in your 'Project'. Also help
 | data-string | D-H-M-S  | DAYS-HOURS-MINUTES-SECONDS  |  Add string to a particular fields for d,h,m,s   |
 | data-expire | String  | Expire,Live,Out Date | The attribute add text after target date completed |
 
-### Apply format
+### Use of data-format(Apply Formats)
 
-> For apply format in countdown:-
+> If you want to show only Day, Hours, Minutes or Seconds separately:-
 
 ```
    <countdown-timer data-time="Feb 24, 2019 23:59:59" data-format="D-M-S" data-string="D-H-M-S" data-expire="LIVE" ></countdown-timer>
